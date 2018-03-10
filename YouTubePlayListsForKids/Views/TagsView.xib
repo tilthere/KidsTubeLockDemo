@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TagsView" customModule="YouTubePlayListsForKids" customModuleProvider="target">
+            <connections>
+                <outlet property="closeBtn" destination="bu8-4q-ye7" id="bRf-yg-ehJ"/>
+                <outlet property="label" destination="LJS-VD-3XM" id="nlz-Wj-Pyh"/>
+                <outlet property="tagsList" destination="GIJ-ka-kKd" id="0Ep-GZ-qfh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Lists by Tags" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJS-VD-3XM">
+                    <rect key="frame" x="16" y="35" width="343" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bu8-4q-ye7">
+                    <rect key="frame" x="338" y="30" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="22C-Yr-c49"/>
+                        <constraint firstAttribute="width" constant="25" id="7Na-Ly-3Ov"/>
+                    </constraints>
+                    <state key="normal" image="close" backgroundImage="close"/>
+                </button>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uWo-Kq-nve">
+                    <rect key="frame" x="5" y="58" width="365" height="604"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIJ-ka-kKd" customClass="TagListView" customModule="TagListView">
+                            <rect key="frame" x="5" y="8" width="336" height="22"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <color key="tintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="paddingY">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="paddingX">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="marginY">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="marginX">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="tagBackgroundColor">
+                                    <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="tintColor" red="0.20000000000000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="GIJ-ka-kKd" secondAttribute="trailing" constant="5" id="Huk-Fq-LgF"/>
+                        <constraint firstItem="GIJ-ka-kKd" firstAttribute="top" secondItem="uWo-Kq-nve" secondAttribute="top" constant="8" id="b63-F5-Fhm"/>
+                        <constraint firstItem="GIJ-ka-kKd" firstAttribute="leading" secondItem="uWo-Kq-nve" secondAttribute="leading" constant="5" id="jZA-Fz-0zA"/>
+                        <constraint firstAttribute="bottom" secondItem="GIJ-ka-kKd" secondAttribute="bottom" constant="5" id="zDj-eP-eca"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="LJS-VD-3XM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="5RT-kF-OmO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="uWo-Kq-nve" secondAttribute="bottom" constant="5" id="7E1-d3-cl4"/>
+                <constraint firstItem="uWo-Kq-nve" firstAttribute="top" secondItem="LJS-VD-3XM" secondAttribute="bottom" constant="5" id="J7V-qB-zEn"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uWo-Kq-nve" secondAttribute="trailing" constant="5" id="RhH-TK-x4m"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LJS-VD-3XM" secondAttribute="trailing" constant="16" id="bIA-Fi-d0I"/>
+                <constraint firstItem="LJS-VD-3XM" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="buM-ce-IaF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bu8-4q-ye7" secondAttribute="trailing" constant="12" id="hdk-Lb-fwj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uWo-Kq-nve" secondAttribute="trailing" constant="5" id="hnq-xK-WaS"/>
+                <constraint firstItem="uWo-Kq-nve" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="mTx-3u-VEg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="uWo-Kq-nve" secondAttribute="bottom" constant="5" id="pPI-Gd-lVO"/>
+                <constraint firstItem="bu8-4q-ye7" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="rw5-Of-v3d"/>
+                <constraint firstItem="uWo-Kq-nve" firstAttribute="top" secondItem="bu8-4q-ye7" secondAttribute="bottom" constant="3" id="w3m-Yh-AW4"/>
+                <constraint firstItem="uWo-Kq-nve" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="xtq-4f-jeO"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="72.5" y="86.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close" width="23" height="23"/>
+    </resources>
+</document>

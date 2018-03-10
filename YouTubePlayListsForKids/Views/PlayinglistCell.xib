@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="PlayinglistCell" customModule="YouTubePlayListsForKids" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6y-2Q-MiG">
+                        <rect key="frame" x="33" y="11" width="276" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZO-AH-qXz">
+                        <rect key="frame" x="5" y="12" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="bcv-cC-UPE"/>
+                            <constraint firstAttribute="height" constant="20" id="njX-Ad-XWf"/>
+                        </constraints>
+                        <state key="normal" image="playing"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="L6y-2Q-MiG" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="2UM-A7-94b"/>
+                    <constraint firstItem="kZO-AH-qXz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Gs0-py-8fu"/>
+                    <constraint firstItem="L6y-2Q-MiG" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="5" id="UxB-1F-fOs"/>
+                    <constraint firstItem="kZO-AH-qXz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="bDe-uO-NRg"/>
+                    <constraint firstItem="L6y-2Q-MiG" firstAttribute="leading" secondItem="kZO-AH-qXz" secondAttribute="trailing" constant="8" id="dD7-RH-5ke"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="playingBtn" destination="kZO-AH-qXz" id="PUh-ct-OQc"/>
+                <outlet property="videoTitle" destination="L6y-2Q-MiG" id="fzb-bm-DRg"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="playing" width="20" height="20"/>
+    </resources>
+</document>

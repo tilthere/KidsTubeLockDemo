@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckboxHeader" customModule="YouTubePlayListsForKids" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelBtn" destination="KUd-dR-etq" id="G4d-v1-SPV"/>
+                <outlet property="countLabel" destination="hIM-Lt-TDO" id="kfg-C5-SXx"/>
+                <outlet property="selectAllBtn" destination="Q2Y-Hr-fr1" id="sYN-tw-0bc"/>
+                <outlet property="selectBtn" destination="N4l-fc-fog" id="yrK-ft-exj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUd-dR-etq">
+                    <rect key="frame" x="15" y="331" width="50" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="WIR-MQ-dkt"/>
+                        <constraint firstAttribute="width" constant="50" id="eeD-FN-Siy"/>
+                    </constraints>
+                    <state key="normal" title="Cancel"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="normalImage" value="normalImage"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="selectedImage"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCheckboxSelected" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4l-fc-fog">
+                    <rect key="frame" x="316" y="328" width="44" height="30"/>
+                    <state key="normal" title="Select"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIM-Lt-TDO">
+                    <rect key="frame" x="166" y="333" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="42" id="20B-Bi-euV"/>
+                        <constraint firstAttribute="height" constant="21" id="nTH-jW-g5o"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2Y-Hr-fr1">
+                    <rect key="frame" x="172" y="328" width="30" height="30"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hIM-Lt-TDO" firstAttribute="centerY" secondItem="KUd-dR-etq" secondAttribute="centerY" id="0bQ-BG-doi"/>
+                <constraint firstItem="Q2Y-Hr-fr1" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="E3e-kN-9uf"/>
+                <constraint firstItem="Q2Y-Hr-fr1" firstAttribute="centerY" secondItem="KUd-dR-etq" secondAttribute="centerY" id="KNa-6T-d2n"/>
+                <constraint firstItem="hIM-Lt-TDO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MXd-a4-6lr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="N4l-fc-fog" secondAttribute="trailing" constant="15" id="U6U-1O-6Lh"/>
+                <constraint firstItem="KUd-dR-etq" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="XIn-md-NGS"/>
+                <constraint firstItem="hIM-Lt-TDO" firstAttribute="centerY" secondItem="N4l-fc-fog" secondAttribute="centerY" id="bIA-ox-gRD"/>
+                <constraint firstItem="KUd-dR-etq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="cYk-kP-AXg"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="normalImage" width="25" height="25"/>
+        <image name="selectedImage" width="25" height="25"/>
+    </resources>
+</document>
