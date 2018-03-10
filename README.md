@@ -1,5 +1,5 @@
 # YouTubePlayListsForKids--demo
-This demo shows how to interact with youtube API, as well as use Realm + iCloud to sync user data.
+This demo is part of the project, it shows how to interact with youtube API, as well as use Realm + iCloud to sync user data.
 
 App store link: https://itunes.apple.com/id/app/kidstubelock/id1350825374?mt=8
 
