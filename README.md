@@ -1,5 +1,7 @@
 # YouTubePlayListsForKids--demo
+This demo shows how to interact with youtube API, as well as use Realm + iCloud to sync user data.
 
+App store link: https://itunes.apple.com/id/app/kidstubelock/id1350825374?mt=8
 
 YouTube has fantastic learning resources for kids. But parents also need to use it with cautions since there are many creepy cartoon videos hiding behind as well. 
  
